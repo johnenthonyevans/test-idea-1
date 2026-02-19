@@ -1,0 +1,20 @@
+[
+  {
+    "cursor_x" : 0.42599999999999999,
+    "cursor_y" : 0.19900000000000001,
+    "file" : "interaction-1-00m08s000.png",
+    "index" : 1,
+    "timestamp" : 8,
+    "timestamp_ms" : 8000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.55700000000000005,
+    "cursor_y" : 0.38,
+    "file" : "interaction-2-00m12s000.png",
+    "index" : 2,
+    "timestamp" : 12,
+    "timestamp_ms" : 12000,
+    "trigger" : "click"
+  }
+]
