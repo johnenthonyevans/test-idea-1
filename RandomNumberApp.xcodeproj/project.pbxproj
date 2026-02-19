@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A10000011D9D85F9 /* RandomNumberAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000001D9D85F9 /* RandomNumberAppApp.swift */; };
-		A10000021D9D85F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000011D9D85F9 /* ContentView.swift */; };
-		A10000031D9D85FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000021D9D85FB /* Assets.xcassets */; };
+		A10000041D9D85F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000021D9D85F9 /* ContentView.swift */; };
+		A10000051D9D85FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000031D9D85FB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A1000FD01D9D85F9 /* RandomNumberApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomNumberApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10000001D9D85F9 /* RandomNumberAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberAppApp.swift; sourceTree = "<group>"; };
-		A10000011D9D85F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A10000021D9D85FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000021D9D85F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A10000031D9D85FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,8 +50,8 @@
 			isa = PBXGroup;
 			children = (
 				A10000001D9D85F9 /* RandomNumberAppApp.swift */,
-				A10000011D9D85F9 /* ContentView.swift */,
-				A10000021D9D85FB /* Assets.xcassets */,
+				A10000021D9D85F9 /* ContentView.swift */,
+				A10000031D9D85FB /* Assets.xcassets */,
 			);
 			path = RandomNumberApp;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000031D9D85FB /* Assets.xcassets in Resources */,
+				A10000051D9D85FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000021D9D85F9 /* ContentView.swift in Sources */,
+				A10000041D9D85F9 /* ContentView.swift in Sources */,
 				A10000011D9D85F9 /* RandomNumberAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

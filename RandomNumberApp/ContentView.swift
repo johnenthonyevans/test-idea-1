@@ -1,46 +1,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var currentNumber: Int = 0
+    @State private var currentNumber: Int = Int.random(in: 1...100)
     @State private var isAnimating: Bool = false
     @State private var scale: CGFloat = 1.0
     @State private var rotation: Double = 0
     @State private var opacity: Double = 1.0
-    @State private var currentColorIndex: Int = 0
     @Environment(\.colorScheme) var colorScheme
 
-    // Color scheme support
-    private let colorPalettes: [(light: (Color, Color), dark: (Color, Color))] = [
-        // Blue gradient
-        (light: (Color(red: 0.95, green: 0.97, blue: 1.0), Color(red: 0.85, green: 0.90, blue: 1.0)),
-         dark: (Color(red: 0.1, green: 0.1, blue: 0.15), Color(red: 0.15, green: 0.15, blue: 0.25))),
-        // Purple gradient
-        (light: (Color(red: 0.98, green: 0.95, blue: 1.0), Color(red: 0.92, green: 0.88, blue: 1.0)),
-         dark: (Color(red: 0.15, green: 0.1, blue: 0.2), Color(red: 0.2, green: 0.15, blue: 0.25))),
-        // Green gradient
-        (light: (Color(red: 0.95, green: 1.0, blue: 0.97), Color(red: 0.88, green: 0.98, blue: 0.92)),
-         dark: (Color(red: 0.1, green: 0.15, blue: 0.12), Color(red: 0.12, green: 0.2, blue: 0.15))),
-        // Pink gradient
-        (light: (Color(red: 1.0, green: 0.95, blue: 0.98), Color(red: 1.0, green: 0.90, blue: 0.95)),
-         dark: (Color(red: 0.2, green: 0.1, blue: 0.15), Color(red: 0.25, green: 0.12, blue: 0.18))),
-        // Orange gradient
-        (light: (Color(red: 1.0, green: 0.97, blue: 0.95), Color(red: 1.0, green: 0.93, blue: 0.88)),
-         dark: (Color(red: 0.2, green: 0.15, blue: 0.1), Color(red: 0.25, green: 0.18, blue: 0.12))),
-        // Cyan gradient
-        (light: (Color(red: 0.95, green: 1.0, blue: 1.0), Color(red: 0.88, green: 0.97, blue: 0.98)),
-         dark: (Color(red: 0.1, green: 0.15, blue: 0.18), Color(red: 0.12, green: 0.18, blue: 0.22)))
-    ]
-
     private var primaryColor: Color {
-        let colors: [Color] = [.blue, .purple, .green, .pink, .orange, .cyan]
-        return colorScheme == .dark
-            ? colors[currentColorIndex].opacity(0.9)
-            : colors[currentColorIndex]
+        colorScheme == .dark
+            ? Color(red: 0.9, green: 0.2, blue: 0.2).opacity(0.9)
+            : Color(red: 0.9, green: 0.2, blue: 0.2)
     }
 
     private var backgroundColor: (Color, Color) {
-        let palette = colorPalettes[currentColorIndex]
-        return colorScheme == .dark ? palette.dark : palette.light
+        colorScheme == .dark
+            ? (Color(red: 0.15, green: 0.1, blue: 0.1), Color(red: 0.2, green: 0.12, blue: 0.12))
+            : (Color(red: 1.0, green: 0.95, blue: 0.95), Color(red: 1.0, green: 0.90, blue: 0.90))
     }
 
     private var cardColor: Color {
@@ -128,12 +105,6 @@ struct ContentView: View {
         // Generate number after a brief delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
             currentNumber = Int.random(in: 1...100)
-
-            // Change to a random color
-            let previousIndex = currentColorIndex
-            repeat {
-                currentColorIndex = Int.random(in: 0..<colorPalettes.count)
-            } while currentColorIndex == previousIndex && colorPalettes.count > 1
 
             // Bounce back animation
             withAnimation(.spring(response: 0.6, dampingFraction: 0.5, blendDuration: 0)) {

@@ -28,7 +28,7 @@ Run the following command to create a proper Xcode project:
 
 ```bash
 # Navigate to the project directory
-cd /Users/john/Code/test-idea-1/.drift/worktrees/pr-1
+cd <path-to-project>
 
 # Create a new Xcode project using xcodegen or similar tool
 # Or use the setup script:
@@ -66,8 +66,8 @@ The app automatically detects the system color scheme using:
 ```
 
 Colors adapt based on the mode:
-- **Light Mode**: Blue gradient, white card, light background
-- **Dark Mode**: Cyan gradient, dark card, darker background
+- **Light Mode**: Red gradient, white card, light background
+- **Dark Mode**: Red gradient, dark card, darker background
 
 ## Testing
 
