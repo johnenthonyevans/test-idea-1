@@ -1,0 +1,29 @@
+[
+  {
+    "cursor_x" : 0.80400000000000005,
+    "cursor_y" : 0.127,
+    "file" : "interaction-1-00m00s000.png",
+    "index" : 1,
+    "timestamp" : 0,
+    "timestamp_ms" : 0,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.39800000000000002,
+    "cursor_y" : 0.92100000000000004,
+    "file" : "interaction-2-00m05s000.png",
+    "index" : 2,
+    "timestamp" : 5,
+    "timestamp_ms" : 5000,
+    "trigger" : "click"
+  },
+  {
+    "cursor_x" : 0.21199999999999999,
+    "cursor_y" : 0.91000000000000003,
+    "file" : "interaction-3-00m07s000.png",
+    "index" : 3,
+    "timestamp" : 7,
+    "timestamp_ms" : 7000,
+    "trigger" : "click"
+  }
+]
