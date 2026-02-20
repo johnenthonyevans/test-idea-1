@@ -6,22 +6,17 @@ struct ContentView: View {
     @State private var scale: CGFloat = 1.0
     @State private var rotation: Double = 0
     @State private var opacity: Double = 1.0
-    @Environment(\.colorScheme) var colorScheme
 
     private var primaryColor: Color {
-        colorScheme == .dark
-            ? Color(red: 0.9, green: 0.2, blue: 0.2).opacity(0.9)
-            : Color(red: 0.9, green: 0.2, blue: 0.2)
+        Color(red: 0.9, green: 0.2, blue: 0.2).opacity(0.9)
     }
 
     private var backgroundColor: (Color, Color) {
-        colorScheme == .dark
-            ? (Color(red: 0.15, green: 0.1, blue: 0.1), Color(red: 0.2, green: 0.12, blue: 0.12))
-            : (Color(red: 1.0, green: 0.95, blue: 0.95), Color(red: 1.0, green: 0.90, blue: 0.90))
+        (Color(red: 0.15, green: 0.1, blue: 0.1), Color(red: 0.2, green: 0.12, blue: 0.12))
     }
 
     private var cardColor: Color {
-        colorScheme == .dark ? Color(red: 0.15, green: 0.15, blue: 0.2) : .white
+        Color(red: 0.15, green: 0.15, blue: 0.2)
     }
 
     var body: some View {
