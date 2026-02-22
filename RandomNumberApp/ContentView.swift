@@ -60,22 +60,22 @@ struct ContentView: View {
 
                 // Generate button
                 Button(action: generateRandomNumber) {
-                    HStack(spacing: 12) {
+                    VStack(spacing: 8) {
                         Image(systemName: "dice.fill")
-                            .font(.system(size: 24))
+                            .font(.system(size: 32))
                         Text("Generate")
-                            .font(.system(size: 22, weight: .semibold, design: .rounded))
+                            .font(.system(size: 18, weight: .semibold, design: .rounded))
                     }
                     .foregroundColor(.white)
-                    .frame(width: 220, height: 65)
+                    .frame(width: 150, height: 150)
                     .background(
                         LinearGradient(
                             gradient: Gradient(colors: [primaryColor, primaryColor.opacity(0.8)]),
-                            startPoint: .leading,
-                            endPoint: .trailing
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
                         )
                     )
-                    .cornerRadius(32.5)
+                    .cornerRadius(30)
                     .shadow(color: primaryColor.opacity(0.5), radius: 15, x: 0, y: 8)
                 }
                 .disabled(isAnimating)

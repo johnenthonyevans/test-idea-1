@@ -6,19 +6,18 @@ A beautiful iOS mobile app that generates random numbers with fun animations and
 
 - 🎲 **Random Number Generation**: Generates random numbers from 1 to 100
 - ✨ **Fun Animations**: Multi-stage animation sequence including shrink, bounce, rotate, and pulse effects
-- 🌓 **Light & Dark Mode**: Fully supports iOS system appearance with adaptive colors
-- 🎨 **Beautiful UI**: Modern SwiftUI design with gradients, shadows, and smooth transitions
+- 🌓 **Dark Mode**: Always-on dark mode with red accent theme
+- 🎨 **Beautiful UI**: Modern SwiftUI design with square elements, gradients, shadows, and smooth transitions
 - 📱 **Native iOS**: Built with SwiftUI for optimal performance and native feel
 
-## Screenshots
+## Design
 
-### Light Mode
-- Clean white card with blue gradient accents
-- Bright, inviting interface
-
-### Dark Mode
-- Dark themed card with cyan gradient accents
-- Easy on the eyes in low light
+### Square Photo Aesthetic
+- All interactive elements use square dimensions for visual consistency
+- 280x280 number display card
+- 150x150 generate button
+- Clean, geometric design with red accent theme
+- Dark mode optimized for comfortable viewing
 
 ## Getting Started
 
@@ -43,12 +42,13 @@ When you tap the "Generate" button:
 4. Settles into final position (0.4s)
 5. Celebratory pulse animation (0.3s)
 
-### Adaptive Colors
-The app automatically adapts to your system appearance:
-- Detects light/dark mode using `@Environment(\.colorScheme)`
-- Primary color: Blue (light) / Cyan (dark)
-- Background: Light gradient (light) / Dark gradient (dark)
-- Card: White (light) / Dark gray (dark)
+### Color Scheme
+The app features a dark mode design with red accents:
+- Always-on dark mode using `.preferredColorScheme(.dark)`
+- Primary color: Red (RGB: 0.9, 0.2, 0.2)
+- Background: Dark gradient
+- Card: Dark gray theme
+- Square button and display elements for geometric consistency
 
 ## Requirements
 
