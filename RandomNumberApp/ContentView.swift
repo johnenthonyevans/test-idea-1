@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var currentNumber: Int = Int.random(in: 1...100)
     @State private var isAnimating: Bool = false
     @State private var scale: CGFloat = 1.0
@@ -8,15 +9,21 @@ struct ContentView: View {
     @State private var opacity: Double = 1.0
 
     private var primaryColor: Color {
-        Color(red: 0.9, green: 0.2, blue: 0.2).opacity(0.9)
+        colorScheme == .dark
+            ? Color(red: 0.9, green: 0.2, blue: 0.2).opacity(0.9)
+            : Color(red: 0.8, green: 0.1, blue: 0.1)
     }
 
     private var backgroundColor: (Color, Color) {
-        (Color(red: 0.15, green: 0.1, blue: 0.1), Color(red: 0.2, green: 0.12, blue: 0.12))
+        colorScheme == .dark
+            ? (Color(red: 0.15, green: 0.1, blue: 0.1), Color(red: 0.2, green: 0.12, blue: 0.12))
+            : (Color(red: 0.95, green: 0.92, blue: 0.92), Color(red: 0.88, green: 0.85, blue: 0.85))
     }
 
     private var cardColor: Color {
-        Color(red: 0.15, green: 0.15, blue: 0.2)
+        colorScheme == .dark
+            ? Color(red: 0.15, green: 0.15, blue: 0.2)
+            : Color.white
     }
 
     var body: some View {
